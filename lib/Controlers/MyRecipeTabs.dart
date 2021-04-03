@@ -32,10 +32,7 @@ class _MyRecipeTabsState  extends State<MyRecipeTabs>
     bool showLeft = alignementBouton == Alignment.centerLeft;
     bool showRight = !showLeft;
           return
-            Container(
-                color: Colors.white,
-
-                child:Column(
+            Column(
                     children:
                     [
                       MySlidingButton(alignementBouton,onTapLeft,onTapRight),
@@ -43,9 +40,9 @@ class _MyRecipeTabsState  extends State<MyRecipeTabs>
                       Row(children: [
                       Visibility(child:Expanded(child:ListViewInstructions(widget.recipe.instructions)),visible:showLeft,),
                         Visibility(child:Expanded(child:ListViewIngredients(widget.recipe.ingredients)),visible: showRight)
-                      ],)
+                      ])
                       )
-                    ])
+                    ]
             );
         }
 

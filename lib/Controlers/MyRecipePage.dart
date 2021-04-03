@@ -38,15 +38,12 @@ class _MyRecipePageState extends State<MyRecipePage>
     Column(
     children: [
       ViewPictureRecipe(widget.recipe),
-      Expanded(child: Container(color: Colors.red,
-          child:Column(children:
+      Expanded(child: Column(children:
         [
         ViewInfoPanel(widget.recipe),
         Expanded(child: MyRecipeTabs(widget.recipe))
 
-    ],
-      )
-  ))
+    ]))
     ])
     );
   }

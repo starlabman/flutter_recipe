@@ -25,6 +25,7 @@ class MyApp extends StatelessWidget {
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
         primarySwatch: Colors.blue,
+          backgroundColor: Colors.white,
           bottomAppBarColor: Colors.green,
           fontFamily: 'SoinSansNeue-medium',
           textTheme: TextTheme(
@@ -54,7 +55,7 @@ class MyApp extends StatelessWidget {
               showUnselectedLabels: true
       )
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Flutter Recipe'),
     );
   }
 }

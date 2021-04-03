@@ -18,6 +18,7 @@ class ListViewInstructions extends StatelessWidget {
     instructions.forEach((element) {print(element);});
     return new ListView.builder(
         itemCount: this.instructions.length,
+        padding: EdgeInsets.all(0),
         //itemBuilder: (c,i) => new ListViewTileCursus(cursusList[i],parentContext),
         itemBuilder: (c,i) => new ListViewInstructionTile(instructions[i],i/*, parentContext*/)
       //itemBuilder: (c,i) => new ListViewTileHardSkill(skillList[i],parentContext),
