@@ -4,6 +4,7 @@ import 'package:flutterrecipe/Models/Recipe.dart';
 import 'package:flutterrecipe/Views/MySlidingPanel/MySlidingButton.dart';
 import 'package:flutterrecipe/Views/RecipesViews/ListViewIngredients.dart';
 import 'package:flutterrecipe/Views/RecipesViews/ListViewInstructions.dart';
+import 'package:page_slider/page_slider.dart';
 
 class MyRecipeTabs extends StatefulWidget
 {
@@ -18,6 +19,7 @@ class MyRecipeTabs extends StatefulWidget
 }
 class _MyRecipeTabsState  extends State<MyRecipeTabs>
 {
+  GlobalKey<PageSliderState> _slider = GlobalKey();
   Alignment alignementBouton;
 
   @override
@@ -33,19 +35,33 @@ class _MyRecipeTabsState  extends State<MyRecipeTabs>
     print("MyRecipeTabs:build:alignementBouton ="+alignementBouton.toString());
     bool showLeft = alignementBouton == Alignment.centerLeft;
     bool showRight = !showLeft;
-          return
+         /* return
             Column(
                     children:
                     [
                       MySlidingButton(alignementBouton,onTapLeft,onTapRight),
                       Expanded(child:
                       Row(children: [
-                      Visibility(child:Expanded(child:ListViewInstructions(widget.recipe.instructions)),visible:showLeft,),
+                        Visibility(child:Expanded(child:ListViewInstructions(widget.recipe.instructions)),visible:showLeft,),
                         Visibility(child:Expanded(child:ListViewIngredients(widget.recipe.ingredients)),visible: showRight)
                       ])
                       )
                     ]
-            );
+            );*/
+    return
+      Column(
+          children:
+          [
+            MySlidingButton(alignementBouton,onTapLeft,onTapRight),
+            Expanded(child:PageSlider(
+            key: _slider,
+            duration: Duration(milliseconds: 400),
+              pages: <Widget>[
+                Card(child:ListViewInstructions(widget.recipe.instructions)),
+                Card(child:ListViewIngredients(widget.recipe.ingredients))
+              ]
+            ))
+          ]);
         }
 
 void onTapLeft()
@@ -53,6 +69,7 @@ void onTapLeft()
   setState(()=>
   {
     this.alignementBouton = Alignment.centerLeft,
+    _slider.currentState.previous(),
   print('leftSizePanel deployed')
   });
 }
@@ -61,7 +78,9 @@ void onTapLeft()
     setState(()=>
     {
       this.alignementBouton = Alignment.centerRight,
+      _slider.currentState.next(),
     print('rightSizePanel deployed')
+
     });
   }
 }
