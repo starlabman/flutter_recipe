@@ -4,7 +4,7 @@ A test application realized for a recruitement evaluation.
 
 ## Getting Started
 How to start it?
-- Clone in your local storage using GitHup
+- Clone in your local storage using GitHub
 - flutter pub get
 - flutter run
 

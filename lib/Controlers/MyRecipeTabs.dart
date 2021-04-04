@@ -58,7 +58,7 @@ class _MyRecipeTabsState  extends State<MyRecipeTabs>
             duration: Duration(milliseconds: 400),
               pages: <Widget>[
                 Card(child:ListViewInstructions(widget.recipe.instructions)),
-                Card(child:ListViewIngredients(widget.recipe.ingredients))
+                 Card(child:ListViewIngredients(widget.recipe.ingredients))
               ]
             ))
           ]);
