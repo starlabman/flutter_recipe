@@ -1,14 +1,21 @@
 import 'package:flutter/material.dart';
 
+/**
+ * Ce Widget permet d'afficher un slider avec deux positions: Gauche et Droite (ici Instructions et Ingredients. il comprend deux fonctions de call back qui
+ * permettent de gérer les conséquences du changement de position depuis le widget parent.
+ */
+
 class MyButtonSlider extends StatelessWidget {
   final Alignment alignment;
   final int speed;
+  final String leftLabel;
+  final String rightLabel;
   final TextStyle selectedTextStyle;
   final TextStyle unSelectedTextStyle;
-  final Function onTapLeft;
-  final Function onTapRight;
+  final Function onTapLeft; // call back lorsque l'on selectionne le bouton gauche
+  final Function onTapRight; // call back lorsque l'on selectionne le bouton droite
 
-  MyButtonSlider(this.alignment,this.speed,this.onTapLeft,this.onTapRight,this.selectedTextStyle,this.unSelectedTextStyle);
+  MyButtonSlider(this.leftLabel,this.rightLabel,this.alignment,this.speed,this.onTapLeft,this.onTapRight,this.selectedTextStyle,this.unSelectedTextStyle);
 
   @override
   Widget build(BuildContext context) {

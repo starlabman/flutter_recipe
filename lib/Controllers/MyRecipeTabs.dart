@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterrecipe/Models/Recipe.dart';
-import 'package:flutterrecipe/Views/MySlidingPanel/MySlidingButton.dart';
-import 'package:flutterrecipe/Views/RecipesViews/ListViewIngredients.dart';
-import 'package:flutterrecipe/Views/RecipesViews/ListViewInstructions.dart';
+import 'package:flutterrecipe/Views/RecipesViews/MySlidingPanel/MySlidingButton.dart';
+import 'package:flutterrecipe/Views/RecipesViews/ListViewIngredients/ListViewIngredients.dart';
+import 'package:flutterrecipe/Views/RecipesViews/ListViewInstructions/ListViewInstructions.dart';
 import 'package:page_slider/page_slider.dart';
 
 class MyRecipeTabs extends StatefulWidget

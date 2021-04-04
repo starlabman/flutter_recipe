@@ -10,8 +10,7 @@ class Recipe
   List<String>instructions;
   List<Ingredient>ingredients;
 
-  Recipe(this.name,this.picture,this.numberLikes,this.kCal,this.duration,
-              this.instructions,this.ingredients);
+  Recipe(this.name,this.picture,this.numberLikes,this.kCal,this.duration, this.instructions,this.ingredients);
 
 
   @override

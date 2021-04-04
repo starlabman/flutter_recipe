@@ -1,14 +1,14 @@
-
 import 'package:flutter/material.dart';
 
+/**
+ * Ce widget affiche un élément de la liste d'ingrédients. Il est appelé par le ListViewBuilder dont il récupère l'indice de l'ingrédient dans la liste d'ingrédients.
+ */
 class ListViewInstructionTile extends StatelessWidget {
-  const ListViewInstructionTile(this.instruction, this.indice
-      /*,this.parentContext*/);
+
+  const ListViewInstructionTile(this.instruction, this.indice);
 
   final String instruction;
   final int indice;
-
-  //final BuildContext parentContext;
 
   @override
   Widget build(BuildContext context) {

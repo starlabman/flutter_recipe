@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-
 import 'ListViewInstructionsTile.dart';
+/**
+ * Ce widget gère la génération de la liste view des instructions. Il construit cette liste avec le ListViewBuilder et la tile ListViewInstructionTile.
+ * Il retourne un texte par défaut lors de l'absence d'instructions
+ */
 
 class ListViewInstructions extends StatelessWidget {
 
   final List<String> instructions;
-  //final BuildContext parentContext;
 
   ListViewInstructions(this.instructions/*,this.parentContext*/);
 
@@ -19,9 +21,7 @@ class ListViewInstructions extends StatelessWidget {
     return new ListView.builder(
         itemCount: this.instructions.length,
         padding: EdgeInsets.all(0),
-        //itemBuilder: (c,i) => new ListViewTileCursus(cursusList[i],parentContext),
-        itemBuilder: (c,i) => new ListViewInstructionTile(instructions[i],i/*, parentContext*/)
-      //itemBuilder: (c,i) => new ListViewTileHardSkill(skillList[i],parentContext),
+        itemBuilder: (c,i) => new ListViewInstructionTile(instructions[i],i)
     );
 
   }

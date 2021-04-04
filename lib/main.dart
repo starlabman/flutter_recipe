@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Controlers/MyHomePage.dart';
+import 'Controllers/MyHomePage.dart';
 
 void main() {
   runApp(MyApp());
@@ -53,7 +53,7 @@ class MyApp extends StatelessWidget {
               showUnselectedLabels: true
       )
       ),
-      home: MyHomePage(title: 'Flutter Recipe'),
+      home: MyHomePage(),
     );
   }
 }
