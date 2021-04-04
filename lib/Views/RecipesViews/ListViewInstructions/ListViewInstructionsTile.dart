@@ -15,6 +15,7 @@ class ListViewInstructionTile extends StatelessWidget {
     print("ListViewInstructionTile::build:instruction=" + instruction);
     return Card(child:
     ListTile(
+      dense: true,contentPadding: EdgeInsets.all(0),
         leading: Text((indice+1).toString(),style: Theme.of(context).textTheme.headline2,),
         title: Text(instruction,style: Theme.of(context).textTheme.bodyText1)));
   }

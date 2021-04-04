@@ -57,8 +57,8 @@ class _MyRecipeTabsState  extends State<MyRecipeTabs>
             key: _slider,
             duration: Duration(milliseconds: 400),
               pages: <Widget>[
-                Card(child:ListViewInstructions(widget.recipe.instructions)),
-                 Card(child:ListViewIngredients(widget.recipe.ingredients))
+                Card(child:ListViewInstructions(widget.recipe.instructions),margin: EdgeInsets.all(0),),
+                 Card(child:ListViewIngredients(widget.recipe.ingredients),margin: EdgeInsets.all(0),)
               ]
             ))
           ]);
