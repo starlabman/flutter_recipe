@@ -21,8 +21,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
-  @override
   int _selectedIndex = 3;
    static List<Widget> _widgetOptions = <Widget>[
       Container(color: Colors.grey,child:Text('Dashboard') ,),
@@ -37,6 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
       _selectedIndex = index;
     });
   }
+  @override
   Widget build(BuildContext context) {
 
     //print();
@@ -84,6 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   void initState() {
+    super.initState();
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp
     ]);

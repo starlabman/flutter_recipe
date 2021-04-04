@@ -21,9 +21,9 @@ class ViewInfoPanel extends StatelessWidget
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children:
         [
-          ViewInfoPanel_Item(recipe,'heart','likes'),
-          ViewInfoPanel_Item(recipe,'calories','kcals'),
-          ViewInfoPanel_Item(recipe,'duration','mins')
+          ViewInfoPanelItem(recipe,'heart','likes'),
+          ViewInfoPanelItem(recipe,'calories','kcals'),
+          ViewInfoPanelItem(recipe,'duration','mins')
         ],
       )
     )

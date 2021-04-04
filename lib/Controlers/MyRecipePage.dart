@@ -8,22 +8,23 @@ import 'MyRecipeTabs.dart';
 
 class MyRecipePage extends StatefulWidget
 {
- Recipe recipe = null;
+
   @override
   _MyRecipePageState createState() => _MyRecipePageState();
 
 }
 class _MyRecipePageState extends State<MyRecipePage>
 {
+  Recipe recipe;
  //Recipe recipe;
   //Recipe recipe ;
   @override
   Widget build(BuildContext context) {
-    if(widget.recipe == null)
+    if(recipe == null)
     {
       Recipe.getRecipe().then((value) =>
       {setState(() {
-        widget.recipe = value;
+        recipe = value;
       })});
       return Column(
           children: [Text("Récupération: chargement de la recette.", style: Theme
@@ -37,11 +38,11 @@ class _MyRecipePageState extends State<MyRecipePage>
     child:
     Column(
     children: [
-      ViewPictureRecipe(widget.recipe),
+      ViewPictureRecipe(recipe),
       Expanded(child: Column(children:
         [
-        ViewInfoPanel(widget.recipe),
-        Expanded(child: MyRecipeTabs(widget.recipe))
+        ViewInfoPanel(recipe),
+        Expanded(child: MyRecipeTabs(recipe))
 
     ]))
     ])

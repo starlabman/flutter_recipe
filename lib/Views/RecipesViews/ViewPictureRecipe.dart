@@ -6,7 +6,7 @@ import 'MyFloatingButton.dart';
 
 class ViewPictureRecipe extends StatelessWidget
 {
-  Recipe recipe;
+  final Recipe recipe;
 
   ViewPictureRecipe(this.recipe);
 

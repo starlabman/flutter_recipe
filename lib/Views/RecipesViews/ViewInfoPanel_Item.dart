@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutterrecipe/Models/Recipe.dart';
 
-class ViewInfoPanel_Item extends StatelessWidget
+class ViewInfoPanelItem extends StatelessWidget
 {
 final Recipe _recipe;
 final String _icone;
 final String _label;
 
-ViewInfoPanel_Item(this._recipe,this._icone,this._label);
+ViewInfoPanelItem(this._recipe,this._icone,this._label);
 
 @override
   Widget build(BuildContext context) {

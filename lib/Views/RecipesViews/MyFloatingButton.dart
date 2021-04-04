@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class MyFloatingButton extends StatelessWidget {
-  Widget _icone;
+  final Widget _icone;
   MyFloatingButton(this._icone);
 
   @override

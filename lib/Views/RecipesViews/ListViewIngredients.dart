@@ -2,14 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutterrecipe/Models/Ingredient.dart';
 
 import 'ListViewIngredientsTile.dart';
-import 'ListViewInstructionsTile.dart';
 
 class ListViewIngredients extends StatelessWidget {
 
   final List<Ingredient> ingredients;
-  //final BuildContext parentContext;
 
-  ListViewIngredients(this.ingredients/*,this.parentContext*/);
+  ListViewIngredients(this.ingredients);
 
   @override
   Widget build(BuildContext context) {
@@ -20,9 +18,7 @@ class ListViewIngredients extends StatelessWidget {
     ingredients.forEach((element) {print(element);});
     return new ListView.builder(
         itemCount: this.ingredients.length,
-        //itemBuilder: (c,i) => new ListViewTileCursus(cursusList[i],parentContext),
-        itemBuilder: (c,i) => new ListViewIngredientsTile(ingredients[i],i/*, parentContext*/)
-      //itemBuilder: (c,i) => new ListViewTileHardSkill(skillList[i],parentContext),
+        itemBuilder: (c,i) => new ListViewIngredientsTile(ingredients[i],i)
     );
 
   }

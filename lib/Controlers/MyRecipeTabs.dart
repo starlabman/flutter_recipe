@@ -22,8 +22,10 @@ class _MyRecipeTabsState  extends State<MyRecipeTabs>
 
   @override
   void initState() {
+    super.initState();
     print("MyRecipeTabs:initState:alignementBouton ="+alignementBouton.toString());
     alignementBouton = Alignment.centerLeft;
+
   }
 
   @override

@@ -2,18 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutterrecipe/Views/MySlidingPanel/MyButtonSlider.dart';
 
 class MySlidingButton extends StatelessWidget {
-  Alignment alignement;
-  Function onTapLeft;
-  Function onTapRight;
+  final Alignment alignement;
+  final Function onTapLeft;
+  final Function onTapRight;
 
   MySlidingButton(this.alignement,this.onTapLeft, this.onTapRight);
 
   @override
   Widget build(BuildContext context) {
- /*   if (_alignment == null)
-      _alignment = Alignment.centerLeft;
-    _alignment == Alignment.centerLeft?_alignment = Alignment.centerRight:_alignment=Alignment.centerLeft;*/
-
   return
       Container
         (
